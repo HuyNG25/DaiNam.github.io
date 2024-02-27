@@ -1,0 +1,41 @@
+body{padding: 20px;
+font-family: sans-serif;
+background-color: aliceblue;}
+img{width: 100%;
+height: auto;}
+.a{display: grid;
+grid-template-columns: repeat(auto-fill,minman(300px,fr));
+grid-gap: 1em;
+}
+.Localtion{position: relative;
+}
+.Localtion-image{line-height: 0px;
+overflow: hidden;
+}
+.Localtion-image img{
+    filter: blur(0px);
+    transition: filter 0.20s ease-in-out;
+    transform: scale(1.1);
+}
+.a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%; width: 100%;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background-color: rgba(23, 0, 90, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Localtion:hover .a{
+    opacity: 1;
+}
+.Localtion:hover .Localtion-image{
+filter:  blur(2px);
+}
